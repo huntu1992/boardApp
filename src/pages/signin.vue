@@ -27,7 +27,8 @@ export default {
           this.$router.push({ name: "PostListPage" });
         })
         .catch(err => {
-          alert(err);
+          // console.log();
+          alert(err.response.data.msg);
         });
     },
     ...mapActions(["signin"])
